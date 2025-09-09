@@ -23,6 +23,10 @@
   <div class="my-4">
     <?php the_posts_pagination(); ?>
   </div>
+
+  <aside class="col-md-4">
+    <?php get_sidebar( 'primary' );?>
+  </aside>
 <?php endif; ?>
 
 <?php get_footer(); ?>
