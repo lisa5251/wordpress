@@ -19,6 +19,7 @@ the_post();?>
                   if($tags_list){
                     echo $tags_list;
                   }
+                  ?>
         </small>      
          
     </div>
