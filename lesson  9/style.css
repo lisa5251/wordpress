@@ -27,3 +27,25 @@ h1 {
   margin: 2rem;
   font-weight: 700;
 }
+.box-rounded{
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 15px;
+
+}
+.box-border-image{
+  border: 20px solid transparent;
+  padding: 20px;
+  border-image-source: url(https://cdn.omlet.com/images/originals/breed_abyssinian_cat.jpg);
+  border-image-slice: 50;
+  border-image-repeat: round;
+}
+.bg-example{
+  background: url(https://www.comfortzone.com/-/media/Project/OneWeb/ComfortZone/Images/Blog/how-can-I-soothe-and-calm-my-cat.jpeg)no-repeat center/cover, linear-gradient(to right, rgb (5 6 7), rgb (5 5 5));
+  
+}
+
+
