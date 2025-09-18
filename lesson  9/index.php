@@ -30,8 +30,8 @@
 <?php endif; ?>
 
 <div class="box-rounded">this box has rounded corners.</div>
-<div class="box-ellipse">Elliptical border radius.</div>
 <div class="box-border-image">this box has an image.</div>
 
-<div class="bg-example">this is a background with image + gradient.</div>
+<div class="box-shadow">This has a shadow.</div>
+<div class="inner-shadow">This box has inner shadow.</div>
 <?php get_footer(); ?>

@@ -43,9 +43,17 @@ h1 {
   border-image-slice: 50;
   border-image-repeat: round;
 }
-.bg-example{
-  background: url(https://www.comfortzone.com/-/media/Project/OneWeb/ComfortZone/Images/Blog/how-can-I-soothe-and-calm-my-cat.jpeg)no-repeat center/cover, linear-gradient(to right, rgb (5 6 7), rgb (5 5 5));
-  
+.box-shadow{
+  background: #ffff;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 10px 10px 20px #6191dd;
+}
+.inner-shadow{
+  background-color:rgb(85, 0, 0) ;
+  padding: 20px;
+  box-shadow: inset 0 0 10px #417cdb;
+  color: white;
 }
 
 
