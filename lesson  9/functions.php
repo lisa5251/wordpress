@@ -33,3 +33,35 @@ function ds_setup() {
 }
 add_action( 'init', 'ds_setup' );
 
+function mytheme_pagination() {
+  global $wp_query;
+
+  if ( $wp_query->max_num_pages < 2 ) {
+    return;
+  }
+
+  $big = 999999999;
+
+  $pagination = paginate_links( array(
+    'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+    'format'    => '?paged=%#%',
+    'current'   => max( 1, get_query_var('paged') ),
+    'total'     => $wp_query->max_num_pages,
+    'prev_text' => __('«'),
+    'next_text' => __('»'),
+    'type'      => 'array'
+  ) );
+
+  if ( is_array( $pagination ) ) {
+    echo '<nav aria-label="Page navigation"><ul class="pagination justify-content-center">';
+    foreach ( $pagination as $page ) {
+      // Add active class for current page
+      if ( strpos( $page, 'current' ) !== false ) {
+        echo '<li class="page-item active">' . str_replace('page-numbers', 'page-link', $page) . '</li>';
+      } else {
+        echo '<li class="page-item">' . str_replace('page-numbers', 'page-link', $page) . '</li>';
+      }
+    }
+    echo '</ul></nav>';
+  }
+}
