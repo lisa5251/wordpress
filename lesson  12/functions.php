@@ -65,3 +65,20 @@ function mytheme_pagination() {
     echo '</ul></nav>';
   }
 }
+
+function create_posttype(){
+  register_post_type(
+    'movies',
+    array(
+      'labels' => array(
+        'name' => __('Movies'),
+        'singular_name' => __('Movies')
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'Movies'),
+      'show_in_rest' => true,
+      'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+    )
+  );
+}
